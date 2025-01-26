@@ -21,7 +21,7 @@ provider "google" {
 }
 
 resource "google_storage_bucket" "static" {
- name          = "FIRST_BUCKET"
+ name          = "dev-data-bucket"
  location      = "US"
  storage_class = "STANDARD"
  uniform_bucket_level_access = true
