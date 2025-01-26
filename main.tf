@@ -18,3 +18,10 @@ provider "google" {
   project = "turing-zone-449023-g3"
   region = "us-central1"
 }
+
+resource "google_storage_bucket" "static" {
+ name          = "FIRST_BUCKET"
+ location      = "US"
+ storage_class = "STANDARD"
+ uniform_bucket_level_access = true
+}
