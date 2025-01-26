@@ -17,7 +17,7 @@ terraform {
 provider "google" {
   project = "turing-zone-449023-g3"
   region = "us-central1"
-  credentials = jsondecode(var.GCP_CREDENTIALS_JSON)
+  credentials = var.GCP_CREDENTIALS_JSON
 }
 
 resource "google_storage_bucket" "static" {
