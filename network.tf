@@ -11,9 +11,9 @@ resource "google_compute_subnetwork" "ksubnet" {
 }
 
 resource "google_compute_firewall" "fw_ssh" {
-  name = "fw_allow_ssh22"
+  name = "fw-allow-ssh22"
   allow {
-    port = ["22"]
+    ports = ["22"]
     protocol = "tcp"
   }
   direction = "INGRESS"
@@ -24,7 +24,7 @@ resource "google_compute_firewall" "fw_ssh" {
 }
 
 resource "google_compute_firewall" "fw_http" {
-  name = "fw_allow_http80"
+  name = "fw-allow-http80"
   allow {
     ports = ["80"]
     protocol = "tcp"
