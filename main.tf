@@ -15,7 +15,7 @@ terraform {
 }
 
 provider "google" {
-  project = "turing-zone-449023-g3"
+  project = "dev-kubernetes-449206"
   region = "us-central1"
   credentials = var.GCP_CREDENTIALS_JSON
 }
